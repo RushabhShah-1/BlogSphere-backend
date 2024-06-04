@@ -35,9 +35,9 @@ export const loginUser = async (request, response) => {
         user.toJSON(),
         process.env.REFRESH_SECRET_KEY
       );
-      console.log("Reached here");
       const newtoken = new Token({ refreshToken: refreshToken });
       await newtoken.save();
+      console.log("Reached here after new token");
       return response.status(200).json({
         accessToken: accessToken,
         refreshToken: refreshToken,
