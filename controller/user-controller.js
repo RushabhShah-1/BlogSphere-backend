@@ -28,13 +28,14 @@ export const loginUser = async (request, response) => {
         user.toJSON(),
         process.env.ACCESS_SECRET_KEY,
         {
-          expiresIn: "15m",
+          expiresIn: "60m",
         }
       );
       const refreshToken = jwt.sign(
         user.toJSON(),
         process.env.REFRESH_SECRET_KEY
       );
+      console.log("Reached here");
       const newtoken = new Token({ refreshToken: refreshToken });
       await newtoken.save();
       return response.status(200).json({
