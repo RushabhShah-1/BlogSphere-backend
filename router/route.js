@@ -20,7 +20,7 @@ router.post("/signup", signupUser);
 router.post("/login", loginUser);
 router.post("/file/upload", upload.single("file"), uploadImage);
 router.get("/file/:filename", getImage);
-router.post("/create", authenticateToken, createPost);
+router.post("/create", createPost);
 router.get("/posts", getAllPosts);
 router.get("/post/:id", getPost);
 router.put("/update/:id", updatePost);
