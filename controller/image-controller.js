@@ -1,7 +1,7 @@
 import grid from "gridfs-stream";
 import mongoose from "mongoose";
 
-const url = "https://blogsphere-backend-5s0l.onrender.com";
+const url = "https://blogosphere-a045086f7c4d.herokuapp.com";
 
 let gfs, gridfsBucket;
 const conn = mongoose.connection;
