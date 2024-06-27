@@ -11,6 +11,7 @@ const PORT = 8000;
 app.use(cors({
   origin: '*',
 }));
+app.options('*', cors()); // Respond to preflight requests
 
 app.use(bodyParser.json({ extended: "true" }));
 app.use(bodyParser.urlencoded({ extended: "true" }));
