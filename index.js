@@ -7,8 +7,9 @@ import bodyParser from "body-parser";
 dotenv.config();
 const app = express();
 const PORT = 8000;
+
 app.use(cors({
-  origin: 'https://blogospheree.netlify.app/',
+  origin: '*',
 }));
 
 app.use(bodyParser.json({ extended: "true" }));
