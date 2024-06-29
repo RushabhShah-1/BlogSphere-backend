@@ -37,7 +37,6 @@ export const loginUser = async (request, response) => {
       );
       //const newtoken = new Token({ refreshToken: refreshToken });
       //await newtoken.save();
-      console.log("Reached here after new token");
       return response.status(200).json({
         accessToken: accessToken,
         refreshToken: refreshToken,
@@ -45,7 +44,7 @@ export const loginUser = async (request, response) => {
         username: user.username,
       });
     } else {
-      return response.status(400).json({ msg: "Password does not match" });
+      return response.status(201).json({ msg: "Password does not match", validPassword: false });
     }
   } catch (error) {
     return response.status(500).json({ msg: "Error while login in user" });
