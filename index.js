@@ -9,7 +9,7 @@ const app = express();
 const PORT = process.env.PORT || 8000;
 
 app.use(cors({
-  origin: 'https://blogospherebackend.netlify.app/',
+  origin: 'https://blogospheree.netlify.app/login',
 }));
 app.options('*', cors()); // Respond to preflight requests
 
