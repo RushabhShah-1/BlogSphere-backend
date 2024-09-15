@@ -8,10 +8,11 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 8000;
 
-app.use(cors({
-  origin: 'https://blogospheree.netlify.app/login',
-}));
-app.options('*', cors()); // Respond to preflight requests
+// app.use(cors({
+//   origin: 'https://blogospheree.netlify.app/login',
+// }));
+app.use(cors());
+// app.options('*', cors()); // Respond to preflight requests
 
 app.use(bodyParser.json({ extended: "true" }));
 app.use(bodyParser.urlencoded({ extended: "true" }));
