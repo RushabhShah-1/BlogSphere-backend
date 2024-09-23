@@ -14,7 +14,7 @@ const PORT = process.env.PORT || 8000;
 app.use(cors());
 // app.options('*', cors()); // Respond to preflight requests
 
-app.use(bodyParser.json({ extended: "true" }));
+app.use(bodyParser.json({ extended: "true",limit:"2500kb" }));
 app.use(bodyParser.urlencoded({ extended: "true" }));
 app.use(bodyParser.text({ extended: "true" }));
 app.use("/", router);
