@@ -22,7 +22,7 @@ router.post("/file/upload", upload.single("file"), uploadImage);
 router.get("/file/:filename", getImage);
 router.post("/create",authenticateToken, createPost);
 router.get("/posts", getAllPosts);
-router.get("/post/:id",authenticateToken, getPost);
+router.get("/post/:id", getPost);
 router.put("/update/:id",authenticateToken, updatePost);
 router.delete("/deletePost/:id",authenticateToken, deletePost);
 router.post("/comment/new",authenticateToken, newComment);
